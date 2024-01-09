@@ -1,11 +1,11 @@
-require 'redcarpet'
+# require 'redcarpet'
 
 module ActiveAdminAddons
   class MarkdownBuilder < CustomBuilder
     def render
       return if data.blank?
 
-      Redcarpet::Markdown.new(renderer, extensions).render(@data).html_safe
+      # Redcarpet::Markdown.new(renderer, extensions).render(@data).html_safe
     end
 
     private
@@ -30,7 +30,7 @@ module ActiveAdminAddons
     end
 
     def renderer
-      @renderer ||= Redcarpet::Render::HTML.new(render_options)
+      # @renderer ||= Redcarpet::Render::HTML.new(render_options)
     end
   end
 end
